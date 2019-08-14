@@ -52,7 +52,7 @@ export default function uncontrollable(Component, controlledValues, methods = []
       return !this._notifying
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       let props = this.props
 
       this._values = Object.create(null)
@@ -62,7 +62,7 @@ export default function uncontrollable(Component, controlledValues, methods = []
       })
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       let props = this.props
 
       controlledProps.forEach(key => {
